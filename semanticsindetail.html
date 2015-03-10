@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <!--Facebook, twitter, pinterest have their own metatags "name="og:title"" is the facebook one, you can have five or ten or these in a page --> 
     <title>HTML Fundamentals</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <!-- script tags can go in here as well, generally frowned upon but sometimes necessary -->
   </head>
   <body class="container">
     <header>
@@ -11,6 +13,9 @@
     </header>
 
     <nav>
+    <!-- Generally, they are unordered list with list items. 
+    <ul> and <li> are block level elements 
+    The only children of <ul>s and <ol>s are <li>, other things can be children of the <li>s, but not of the ols-->
       <ul class="list-unstyled list-inline">
         <li><a href="#">Menu 001</a></li>
         <li><a href="#">Menu 002</a></li>
@@ -22,12 +27,16 @@
 
     <main>
       <header>
+      <!-- Group together all the section header elements.
+        you might have to group subheders too. replaces a div that is labelled with "header" -->
         <h1>Main Section</h1>
         <h2>Or where your main content lives</h2>
         <h3>Bitmaker Labs</h3>
       </header>
 
       <section id="hero-unit">
+      <!-- section acts like a div, it's a stand-alone section, the rules of using section are pretty vague and random. Not exactly the same as a div, but they behave the same way. <div> should be there for organization of document for styling
+      -->
         <div class="hero">
           Let"s learn about the purpose of different HTML elements through the markup of this page.
         </div>
@@ -35,9 +44,10 @@
 
       <section id="article-list">
         <article class="post">
+        <!-- blog posts in a blog, but it doesn't have to be a blog post. For example, a film in a film page would be an article. Block level.-->
           <h1>Post 001</h1>
           <p>
-            Lorem ipsum dolor sit amet, <span class="inline-text">consectetur adipisicing elit</span>. Laudantium neque delectus <strong>commodi quisquam natus</strong>, veniam. Dolorem vel consectetur, et quas nihil inventore sed quia, sit quisquam quibusdam molestias corrupti ipsum.</p>
+            Lorem ipsum dolor sit amet, <span class="inline-text"> <!--mark up some text withing a block level element. Inline element -- only take up the width of its contents and doesn’t break up the paragraph it's in-->consectetur adipisicing elit</span>. Laudantium neque delectus <strong>commodi quisquam natus</strong>, veniam. Dolorem vel consectetur, et quas nihil inventore sed quia, sit quisquam quibusdam molestias corrupti ipsum.</p>
           <h2>Subheader</h2>
           <p>
             Lorem ipsum dolor sit amet, <span class="inline-text">consectetur adipisicing elit</span>. Rem voluptatum perspiciatis velit similique, earum iste doloremque modi impedit animi repellat nobis molestiae, natus reiciendis eum harum! <em>Obcaecati</em>, minima consectetur quisquam?</p>
@@ -100,11 +110,12 @@
         <dd>Separates styles from content on the web</dd>
       </dl>
 
-      <form action="/styleguide">
+      <a href="mailto:mina@bitmakerlabs.com?subject=EMAILME&body=This is something else"> Email ME!</a>
+      <form action="/index.html" method="GET">
         <div class="field">
           <label for="field-text">
             Text
-            <input id="field-text" name="field-text" type="text">
+            <input id="field-text" name="field-text" type="text" value="Default Value" placeholder="e.g. John Doe">
           </label>
         </div>
         <div class="field">
@@ -151,11 +162,11 @@
         </div>
         <div class="field">
           <label for="field-textarea">Textarea</label>
-          <textarea id="field-textarea" name="field-textarea"></textarea>
+          <textarea id="field-textarea" name="field-textarea" placeholder="tell me about your life"></textarea>
         </div>
         <div class="field">
           <label for="field-select">Select</label>
-          <select id="field-select" name="field-select">
+          <select id="field-select" name="field-select" multiple="multiple">
             <option value="CA">Canada</option>
             <option value="US">United States</option>
             <option value="MX">Mexico</option>
@@ -172,7 +183,7 @@
         <fieldset class="field">
           <legend>Checkboxes</legend>
           <label>
-            <input name="field-checkbox" type="checkbox">
+            <input name="field-checkbox" type="checkbox" value="Action/Adventure">
             Check 1
           </label>
           <label>
@@ -225,12 +236,27 @@
         </div>
       </form>
 
+      <table>
+        <tr>
+          <td> One </td>
+          <td> Two </td>
+          <td>Three</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+      </table>
+
       <footer>
+      <!-- Default spans all the way across, and it's just a nice name / semantic name for a div that is a footer, you can put whatever you want inside. -->
         This is the footer for the main section
       </footer>
     </main>
 
     <aside>
+    <!--related, tangential information... sidebar, or a sidebar to the site-->
       Secondary content related to content around it, or used as a sidebar in a layout. We'll see how to actually get it to be a literal sidebar in the next section.
     </aside>
 
